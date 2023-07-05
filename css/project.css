@@ -55,10 +55,21 @@ h2 {
     font-size: 16px;
 }
 
-.post {
+.post1 {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
+}
+
+.post1 > div {
+    flex-grow: 1;
+}
+
+.post{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    flex-direction: column;
 }
 
 .post > div {
