@@ -1,0 +1,66 @@
+@font-face {
+    font-family: 'ImcreSoojin';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.3/ImcreSoojin.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: "ImcreSoojin", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    background-color: #f7e2fc;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #5D4037;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.post {
+    display: flex;
+    align-items: flex-start;
+}
+
+.post img {
+    max-width: 300px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.post > div {
+    flex-grow: 1;
+}
+
+label {
+    font-weight: 700;
+    color: #5D4037;
+}
+
+.write {
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555;
+    text-align: right;
+}
+
+/* Add any additional styles as needed */

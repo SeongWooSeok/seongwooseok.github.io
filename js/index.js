@@ -74,7 +74,7 @@ Vue.config.devtools = true;
                 },
                 handleClick() {
                   if (this.dataId === 'Minty') {
-                      window.location.href = '/project/minty.html';
+                      window.location.href = '/project/Minty.html';
                   } else if (this.dataId === 'ERP Groupware') {
                       window.location.href = '/project/erp.html';
                   } else if (this.dataId === 'Library Management Program') {
