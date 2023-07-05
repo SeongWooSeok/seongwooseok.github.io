@@ -14,6 +14,10 @@
     hidden으로 숨겨줘야됨*/
   }
   
+  .slides li img {
+    width: 300px;
+    height: auto;
+  }
   
   .slides{
     position: absolute;

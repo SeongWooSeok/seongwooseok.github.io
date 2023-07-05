@@ -80,17 +80,3 @@ label {
 .write div {
     white-space: pre-line;
 }
-
-.img-container {
-    display: flex;
-    border: 2px solid #f7e2fc;
-    border-radius:8px;
-  }
-  
-  .img-container img {
-    flex: 0 0 auto;
-    margin-right: 50px;
-    width: 200px;
-  }
-
-  
