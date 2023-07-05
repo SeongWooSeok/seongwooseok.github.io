@@ -33,8 +33,13 @@ h1 {
     text-align: center;
 }
 
+.first {
+    border: 1px solid black;
+}
+
 .post {
     display: flex;
+    flex-wrap: wrap;
     align-items: flex-start;
 }
 
@@ -63,4 +68,3 @@ label {
     text-align: right;
 }
 
-/* Add any additional styles as needed */

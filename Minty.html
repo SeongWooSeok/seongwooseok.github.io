@@ -1,15 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+        @font-face {
+            font-family: 'Dovemayo_gothic';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.1/Dovemayo_gothic.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+          }
+        
+        body {
+            font-family: 'Dovemayo_gothic';
+            font-size: 14px;
+            font-weight: 500;
+            background-color: #f7e2fc;
+            -webkit-font-smoothing: antialiased;
+            margin: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        .title {
+            display: flex;
+            align-items: center
+        }
+        
+        .content {
+            max-width: 800px;
+            margin-top: 0 auto;
+            padding: 40px;
+            background-color: rgba(255, 255, 255, 0.89);
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            font-size: 36px;
+            font-weight: 700;
+            color: #5D4037;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        h2 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #5D4037;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        
+        .first {
+            border: 2px solid #634d47;
+            border-radius: 6px;
+            margin-left: 1px;
+            font-size: 16px;
+        }
+        
+        .post {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+        }
+        
+        .post > div {
+            flex-grow: 1;
+        }
+        
+        label {
+            font-weight: 700;
+            color: #5D4037;
+        }
+        
+        .write {
+            margin-top: 20px;
+            font-size: 16px;
+            line-height: 1.5;
+            color: black;
+        }
+
+        .write div {
+            white-space: pre-line;
+        }
+
+        .img-container {
+            display: flex;
+            border: 2px solid #f7e2fc;
+            border-radius:8px;
+          }
+          
+          .img-container img {
+            flex: 0 0 auto;
+            margin-right: 50px;
+          }
+        
+    </style>
     <meta charset="UTF-8">
-    <title>bi portfolio</title>
+    <title>seongwooseok portfolio</title>
     <link rel="icon" href="image/logo/liyo2.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/header.css">
     <link rel="stylesheet" type="text/css" href="css/footer.css">
-    <link rel="stylesheet" type="text/css" href="css/project.css">
+    <!-- <link rel="stylesheet" type="text/css" href="css/project.css"> -->
     <script src="js/layout.js"></script>
     <script src="js/jQueryRotate.js"></script>
 <body>
@@ -17,42 +112,98 @@
     <div id="header"></div>
 
     <div class="content">
-        <h1>Minty</h1>
-        <img src="/image/project/Minty/MintyLogo.png" alt="Minty 로고">
+        <div class="title">
+            <h1>Minty</h1>
+            <img src="/image/project/Minty/MintyLogo.png" alt="Minty 로고" style="margin-left: auto;">
+        </div>
         <div class="post">
-            <div>
+            <div class="first">
                 <label for="">Front-end</label>
                 <div>HTML5, CSS3, JavaScript, React</div>
             </div>
-            <div>
+            <div class="first">
                 <label for="">Back-end</label>
                 <div>Java, Python</div>
             </div>
-            <div>
+            <div class="first">
                 <label for="">Framework</label>
                 <div>SpringBoot</div>
             </div>
-            <div>
-                <label for="Database"></label>
+            <div class="first">
+                <label for="">Database</label>
                 <div>My SQL</div>
             </div>
-            <div>
+            <div class="first">
                 <label for="">Version Control</label>
                 <div>Git, GitHub</div>
             </div>
             <div class="write">
-                <b>개인상점을 간편하게 관리하고 거래할 수 있도록 도와주는 중고거래 플랫폼 웹사이트</b>입니다. 
-                코로나19로 인한 여파로 소극적이게 변한 외부활동, 보다 더 편리하고
-                새로운 서비스로 사람들의 관심을 사 중고거래를 다시 활성화시키고자 하는 의도를 담아 개발했습니다.
-                
+                <div>
+                    <b>개인상점을 간편하게 관리하고 거래할 수 있도록 도와주는 중고거래 플랫폼 웹사이트</b>입니다. 
+                    코로나19로 인한 여파로 소극적이게 변한 외부활동, 보다 더 편리하고
+                    새로운 서비스로 사람들의 관심을 사 중고거래를 다시 활성화시키고자 하는 의도를 담아 개발했습니다.
+                    Api와 크롤링이 무엇인지는 알고있었지만 프로젝트에 적용한 것은 처음입니다.
+                    기능을 적용하면서 웹 개발에서 정보와 데이터 연결의 복잡성을 체감했고 
+                    외부시스템과의 연동이 웹에 얼마나 많은 영향을 미치는지 체험했습니다.
+                    또한 최근에 인기있는 React를 적용하여 컴포넌트의 독립 동작과 가독성 증가 및 중복을 줄였습니다.
+                    Minty 프로젝트 경험을 통해 많은 학습을 했고 개발에 대한 역량을 키울 수 있었습니다.
+                    개인적으로는 다시 한번 프로젝트에서는 개인 역량도 중요하지만 소통이 제일 중요하다는 것을 깨달았습니다.  
+                    <a href="https://github.com/SeongWooSeok/Minty">Minty 프로젝트</a>
+                </div>
             </div>
         </div>
-
+    </div>
+    <div class="content">
         <div class="post">
-            <img src="이미지 URL" alt="게시물 이미지">
-            <p>게시물 설명</p>
-        </div>
+            <div class="write">
+                <h2>민팅챗봇 ChatGptApi활용</h2>
+                <div class="img-container">
+                    <img src="/image/project/Minty/민팅1.png" alt="GptApi 활용모습">
+                    <img src="/image/project/Minty/민팅2.png" alt="GptApi 활용모습">
+                </div>
+                <div>
+                    <b>GptApi를 이용해서 간단한 챗봇을 만들었습니다.</b> openAI사이트에서 Api키를 받고 사용하면 됩니다.
+                    다만 유료이기 때문에 확인하고 사용해야하며 18달러까지는 무료입니다.
+                    github링크에 ChatGpt.py를 보면 python코드를 사용해서 Spring에 연동해서 사용하고 있습니다.
+                    처음에는 자이썬을 이용해서 연결해보려 했지만 오류도 많고 원하는 방식이 아니라는것을 알고 
+                    ProcessBuilder를 사용해 파이썬을 작동 했습니다. 주요 코드만 보고 설명하겠습니다.
 
+                    String pythonScriptPath = "ChatGpt.py경로"
+                    ProcessBuilder processBuilder = new ProcessBuilder("python", pythonScriptPath, nickname, apiKey);
+                    processBuilder.redirectErrorStream(true);
+                    Process process = processBuilder.start();
+
+                    파이썬 경로를 읽어와서 ProcessBuilder로 읽는 형식으로 작동시켰으며 nickname, apikey는 스프링에서 
+                    값을 받아 파이썬으로 전달하기위해서 processBuilder에 작성했습니다.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="post">
+            <div class="write">
+                <h2>시세조회</h2>
+                <div class="img-container">
+                    <img src="/image/project/Minty/민팅1.png" alt="GptApi 활용모습">
+                    <img src="/image/project/Minty/민팅2.png" alt="GptApi 활용모습">
+                </div>
+                <div>
+                    <b>GptApi를 이용해서 간단한 챗봇을 만들었습니다.</b> openAI사이트에서 Api키를 받고 사용하면 됩니다.
+                    다만 유료이기 때문에 확인하고 사용해야하며 18달러까지는 무료입니다.
+                    github링크에 ChatGpt.py를 보면 python코드를 사용해서 Spring에 연동해서 사용하고 있습니다.
+                    처음에는 자이썬을 이용해서 연결해보려 했지만 오류도 많고 원하는 방식이 아니라는것을 알고 
+                    ProcessBuilder를 사용해 파이썬을 작동 했습니다. 주요 코드만 보고 설명하겠습니다.
+
+                    String pythonScriptPath = "ChatGpt.py경로"
+                    ProcessBuilder processBuilder = new ProcessBuilder("python", pythonScriptPath, nickname, apiKey);
+                    processBuilder.redirectErrorStream(true);
+                    Process process = processBuilder.start();
+
+                    파이썬 경로를 읽어와서 ProcessBuilder로 읽는 형식으로 작동시켰으며 nickname, apikey는 스프링에서 
+                    값을 받아 파이썬으로 전달하기위해서 processBuilder에 작성했습니다.
+                </div>
+            </div>
+        </div>
     </div>
 
     <div id="footer"></div>
