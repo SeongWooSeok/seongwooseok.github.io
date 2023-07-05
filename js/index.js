@@ -74,13 +74,13 @@ Vue.config.devtools = true;
                 },
                 handleClick() {
                   if (this.dataId === 'Minty') {
-                      window.location.href = '/project/Minty.html';
+                      window.location.href = '/Minty.html';
                   } else if (this.dataId === 'ERP Groupware') {
-                      window.location.href = '/project/erp.html';
+                      window.location.href = '/erp.html';
                   } else if (this.dataId === 'Library Management Program') {
-                      window.location.href = '/project/library.html';
+                      window.location.href = '/library.html';
                   } else if (this.dataId === 'Console Random Food Select') {
-                      window.location.href = '/project/food.html';
+                      window.location.href = '/food.html';
                   }
               }
             }
