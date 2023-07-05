@@ -1,12 +1,12 @@
 @font-face {
-    font-family: 'ImcreSoojin';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.3/ImcreSoojin.woff') format('woff');
+    font-family: 'Dovemayo_gothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.1/Dovemayo_gothic.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
-}
+  }
 
 body {
-    font-family: "ImcreSoojin", sans-serif;
+    font-family: 'Dovemayo_gothic';
     font-size: 14px;
     font-weight: 500;
     background-color: #f7e2fc;
@@ -16,39 +16,49 @@ body {
     padding-bottom: 0;
 }
 
+.title {
+    display: flex;
+    align-items: center
+}
+
 .content {
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 1200px;
+    margin-top: 0 auto;
     padding: 40px;
-    background-color: #fff;
-    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.89);
+    border-radius: 6px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    margin-left: 16.5%;
 }
 
 h1 {
-    font-size: 28px;
+    font-size: 36px;
     font-weight: 700;
     color: #5D4037;
     margin-bottom: 20px;
     text-align: center;
 }
 
+h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #5D4037;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
 .first {
-    border: 1px solid black;
+    border: 2px solid #634d47;
+    border-radius: 6px;
+    margin-left: 1px;
+    font-size: 16px;
 }
 
 .post {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-}
-
-.post img {
-    max-width: 300px;
-    height: auto;
-    margin-right: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .post > div {
@@ -64,7 +74,23 @@ label {
     margin-top: 20px;
     font-size: 16px;
     line-height: 1.5;
-    color: #555;
-    text-align: right;
+    color: black;
 }
 
+.write div {
+    white-space: pre-line;
+}
+
+.img-container {
+    display: flex;
+    border: 2px solid #f7e2fc;
+    border-radius:8px;
+  }
+  
+  .img-container img {
+    flex: 0 0 auto;
+    margin-right: 50px;
+    width: 200px;
+  }
+
+  
