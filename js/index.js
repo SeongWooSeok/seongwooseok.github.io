@@ -20,7 +20,7 @@ Vue.component("card", {
     this.width = this.$refs.card.offsetWidth;
     this.height = this.$refs.card.offsetHeight;
   },
-  props: ["dataImage", "link"],
+  props: ["dataImage"],
   data() {
     return {
       width: 0,
