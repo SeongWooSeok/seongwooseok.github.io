@@ -26,14 +26,14 @@
         }
         
         .content {
-            max-width: 800px;
+            max-width: 1200px;
             margin-top: 0 auto;
             padding: 40px;
             background-color: rgba(255, 255, 255, 0.89);
             border-radius: 6px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             margin-bottom: 30px;
-            margin-left: 28%;
+            margin-left: 16.5%;
         }
         
         h1 {
@@ -106,9 +106,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/header.css">
     <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <link rel="stylesheet" type="text/css" href="css/slide.css">
     <!-- <link rel="stylesheet" type="text/css" href="css/project.css"> -->
     <script src="js/layout.js"></script>
     <script src="js/jQueryRotate.js"></script>
+    <script src="js/slide.js"></script>
 <body>
 
     <div id="header"></div>
@@ -160,10 +162,19 @@
         <div class="post">
             <div class="write">
                 <h2>민팅챗봇 ChatGptApi활용</h2>
-                <div class="img-container">
-                    <img src="/image/project/Minty/민팅1.png" alt="GptApi 활용모습">
-                    <img src="/image/project/Minty/민팅2.png" alt="GptApi 활용모습">
-                </div>
+                <div id="slideShow">
+                    <ul class="slides">
+                      <li><img src="/image/project/Minty/민팅1.png" alt="GptApi 활용모습"></li>
+                      <li><img src="/image/project/Minty/민팅2.png" alt="GptApi 활용모습"></li>
+                    </ul>  
+                    <p class="controller">
+                      
+                      <!-- &lang: 왼쪽 방향 화살표
+                      &rang: 오른쪽 방향 화살표 -->
+                      <span class="prev">&lang;</span>  
+                      <span class="next">&rang;</span>
+                    </p>
+                  </div>
                 <div>
                     <b>GptApi를 이용해서 간단한 챗봇을 만들었습니다.</b> 
                     openAI사이트에서 Api키를 받고 사용하면 됩니다.
