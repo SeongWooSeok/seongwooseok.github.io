@@ -71,6 +71,9 @@ Vue.component("card", {
         this.mouseY = 0;
       }, 1000);
     },
+    navigateTo(url) {
+      window.location.href = url;
+    },
   },
 });
 
