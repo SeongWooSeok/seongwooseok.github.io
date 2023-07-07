@@ -1,18 +1,3 @@
-/* borderzone */
-/* 만들면서 어떤 구역의 크기가 틀리고, 
-어떤 구역이 빗나가있는지 확인하기 위한 용도이므로 배포 시 삭제하시면 됩니다. */
-.conta{border: 1px rgb(142, 214, 34) solid;}
-.toleft{border: 1px rgb(253, 193, 104) solid;}
-.toright{border: 1px rgb(252, 185, 98) solid;}
-.content{border: 1px rgb(188, 152, 255) solid;}
-.slide{border: 2px rgb(99, 224, 255) solid;}
-#slides{border: 2px rgb(2, 75, 47) solid;}
-/* ===================== */
- 
-body{
-    margin: 0;
-    padding: 0;
-}
 .conta{
     margin: 0;
     width: 100vw;
