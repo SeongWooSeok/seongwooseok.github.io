@@ -94,21 +94,21 @@ label {
 }
 
 .box{
-    width: 250px; 
+    width: 400px; 
     margin: 0 auto;
   }
   
   .slide{ 
-    width:250px; height:333px;
+    width:400px; height:450px;
     overflow: hidden;
   }
   .images{
     display: flex; 
-    height:333px;
+    height:450px;
     transition: transform 0.5s;
   }
   img{
-    width:250px; height:333px;
+    width:400px; height:450px;
   }
   
   .back{
