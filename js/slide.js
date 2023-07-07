@@ -1,43 +1,37 @@
-// Function to initialize the slideshow
-function initSlideShow() {
-  const slides = document.querySelectorAll('#slideShow .slides li');
-  let currentSlide = 0;
-
-  // Function to show a slide
-  function showSlide(index) {
-    slides.forEach((slide) => {
-      slide.classList.remove('active');
-    });
-    slides[index].classList.add('active');
+let curPos = 0;
+let postion = 0;
+const IMAGE_WIDTH = 640;
+const prevBtn = document.querySelector(".prev")
+const nextBtn = document.querySelector(".next")
+const images = document.querySelector(".images")
+ 
+function prev(){
+  if(curPos > 0){
+    nextBtn.removeAttribute("disabled")
+    postion += IMAGE_WIDTH;
+    images.style.transform = `translateX(${postion}px)`;
+    curPos = curPos - 1;
   }
-
-  // Function to navigate to the previous slide
-  function prevSlide() {
-    currentSlide--;
-    if (currentSlide < 0) {
-      currentSlide = slides.length - 1;
-    }
-    showSlide(currentSlide);
+  if(curPos == 0){
+    prevBtn.setAttribute('disabled', 'true')
   }
-
-  // Function to navigate to the next slide
-  function nextSlide() {
-    currentSlide++;
-    if (currentSlide >= slides.length) {
-      currentSlide = 0;
-    }
-    showSlide(currentSlide);
-  }
-
-  // Add event listeners to the previous and next buttons
-  const prevButton = document.querySelector('#slideShow .controller .prev');
-  const nextButton = document.querySelector('#slideShow .controller .next');
-  prevButton.addEventListener('click', prevSlide);
-  nextButton.addEventListener('click', nextSlide);
-
-  // Show the first slide
-  showSlide(currentSlide);
 }
-
-// Initialize the slideshow when the page loads
-window.addEventListener('load', initSlideShow);
+function next(){
+  if(curPos < 3){
+    prevBtn.removeAttribute("disabled")
+    postion -= IMAGE_WIDTH;
+    images.style.transform = `translateX(${postion}px)`;
+    curPos = curPos + 1;
+  }
+  if(curPos == 3){
+    nextBtn.setAttribute('disabled', 'true')
+  }
+}
+ 
+function init(){
+  prevBtn.setAttribute('disabled', 'true')
+  prevBtn.addEventListener("click", prev)
+  nextBtn.addEventListener("click", next)
+}
+ 
+init();
