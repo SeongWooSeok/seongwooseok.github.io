@@ -1,82 +1,57 @@
-  li{
-    list-style-type: none;
-  }
-  
-  /* 보여줄 구간의 높이와 넓이 설정 */
-  #slideShow{
-    width: 600px;
-    height: 600px;
-    position: relative;
-    margin: 50px auto;
-    overflow: hidden;   
-    /*리스트 형식으로 이미지를 일렬로 
-    정렬할 것이기 때문에, 500px 밖으로 튀어 나간 이미지들은
-    hidden으로 숨겨줘야됨*/
-  }
-  
-  .slides li img {
-    width: 350px;
-    height: 350px;
-  }
-  
-  .slides{
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 3000px; /* 슬라이드할 사진과 마진 총 넓이 */
-    transition: left 0.5s ease-out; 
-    /*ease-out: 처음에는 느렸다가 점점 빨라짐*/
-  }
-  
-  /* 첫 번째 슬라이드 가운데에 정렬하기위해
-  첫번째 슬라이드만 margin-left조정 */
-  .slides li:first-child{
-    margin-left: 100px;
-  }
-  
-  /* 슬라이드들 옆으로 정렬 */
-  .slides li:not(:last-child){
-    float: left;
-    margin-right: 100px;
-  }
-  
-  .slides li{
-    float: left;
-  }
-  
-  .controller span{
-    position:absolute;
-    background-color: transparent;
-    color: black;
+/* borderzone */
+/* 만들면서 어떤 구역의 크기가 틀리고, 
+어떤 구역이 빗나가있는지 확인하기 위한 용도이므로 배포 시 삭제하시면 됩니다. */
+.conta{border: 1px rgb(142, 214, 34) solid;}
+.toleft{border: 1px rgb(253, 193, 104) solid;}
+.toright{border: 1px rgb(252, 185, 98) solid;}
+.content{border: 1px rgb(188, 152, 255) solid;}
+.slide{border: 2px rgb(99, 224, 255) solid;}
+#slides{border: 2px rgb(2, 75, 47) solid;}
+/* ===================== */
+ 
+body{
+    margin: 0;
+    padding: 0;
+}
+.conta{
+    margin: 0;
+    width: 100vw;
+    height: 500px;
+}
+.slide{
+    width: 90vw;
+    height: 100%;
+    display: flex;
+}
+ 
+/* .slide * {display: inline-block;} */
+.toleft, .toright {
+    width: 10%; 
     text-align: center;
-    border-radius: 50%;
-    padding: 10px 20px;
-    top: 50%;
-    font-size: 1.3em;
-    cursor: pointer;
-  }
-  
-  /* 이전, 다음 화살표에 마우스 커서가 올라가 있을때 */
-  .controller span:hover{
-    background-color: rgba(128, 128, 128, 0.11);
-  }
-  
-  .prev{
-    left: 10px;
-  }
-  
-  /* 이전 화살표에 마우스 커서가 올라가 있을때 
-  이전 화살표가 살짝 왼쪽으로 이동하는 효과*/
-  .prev:hover{
-    transform: translateX(-10px);
-  }
-  
-  .next{
-    right: 10px;
-  }
-  
-  /* 다음 화살표에 마우스 커서가 올라가 있을때 
-  이전 화살표가 살짝 오른쪽으로 이동하는 효과*/
-  .next:hover{
-    transform: translateX(10px);
-  }
+    padding-top: 4em;
+    cursor:pointer;
+}
+.toleft{float: left;}
+.toright{float: right;}
+ 
+.content{
+    width: 80%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.slides {
+    display: inline-block;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    transition:all .5s;
+}
+.slides img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+/* #slide1{
+    transform: translateX(-100%);
+    z-index: 1;
+} */​
