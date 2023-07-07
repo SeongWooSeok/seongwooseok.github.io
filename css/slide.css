@@ -30,6 +30,11 @@ li{
   margin-right: 100px;
 }
 
+.slides li img{
+  width: 400px;
+  height: 400px;
+}
+
 .slides li{
   float: left;
 }
@@ -65,3 +70,4 @@ li{
 .next:hover{
   transform: translateX(10px);
 }
+
