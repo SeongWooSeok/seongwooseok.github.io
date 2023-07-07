@@ -87,20 +87,24 @@ label {
     font-size: 16px;
     line-height: 1.5;
     color: black;
+    flex-direction: column;
 }
 
 .write div {
     white-space: pre-line;
 }
 
-.imgContainer{
+.imgContainer {
     display: flex;
-    border: 1px border #5D4037;
+    border: 1px solid #5D4037;
     border-radius: 5px;
-    justify-content: center;
     margin-top: 20px;
+    width: 700px;
+    height: 450px;
+    overflow-x: scroll;
 }
 
 .imgContainer img {
     margin: 0 10px;
+    max-height: 100%;
 }
