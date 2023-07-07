@@ -95,6 +95,8 @@ label {
 
 .imgContainer{
     display: flex;
+    border: 1px border #5D4037;
+    border-radius: 5px;
     justify-content: center;
     margin-top: 20px;
 }

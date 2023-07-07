@@ -63,28 +63,30 @@
     <div class="content">
         <div class="post">
             <h2>민팅챗봇 ChatGptApi활용</h2>
-            <div class="imgContainer">
-                <img src="/image/project/Minty/민팅1.png" alt="GptApi 활용모습">
-                <img src="/image/project/Minty/민팅2.png" alt="GptApi 활용모습">
-            <div>
             <div class="write">
-                    <b>GptApi를 이용해서 간단한 챗봇을 만들었습니다.</b> 
-                    openAI사이트에서 Api키를 받고 사용하면 됩니다.
-                    다만 유료이기 때문에 확인하고 사용해야하며 18달러까지는 무료입니다.
-                    github링크에 ChatGpt.py를 보면 python코드를 사용해서 Spring에 연동해서 사용하고 있습니다.
-                    처음에는 자이썬을 이용해서 연결해보려 했지만 오류도 많고 원하는 방식이 아니라는것을 알고 
-                    ProcessBuilder를 사용해 파이썬을 작동 했습니다. 주요 코드만 보고 설명하겠습니다.
-
-                    String pythonScriptPath = "ChatGpt.py경로"
-                    ProcessBuilder processBuilder = new ProcessBuilder("python", pythonScriptPath, nickname, apiKey);
-                    processBuilder.redirectErrorStream(true);
-                    Process process = processBuilder.start();
-
-                    파이썬 경로를 읽어와서 ProcessBuilder로 읽는 형식으로 작동시켰으며 nickname, apikey는 스프링에서 
-                    값을 받아 파이썬으로 전달하기위해서 processBuilder에 작성했습니다. 파이썬에서 작동시키는 것이기 떄문에
-                    타임리프가 아닌 tkinker을 사용해서 창을 띄워 대화창을 만들었습니다.
-
-                    (mintingController, ChatGpt.py, footer.html)
+                <div class="imgContainer">
+                    <img src="/image/project/Minty/민팅1.png" alt="GptApi 활용모습">
+                    <img src="/image/project/Minty/민팅2.png" alt="GptApi 활용모습">
+                </div>
+                    <div>
+                        <b>GptApi를 이용해서 간단한 챗봇을 만들었습니다.</b> 
+                        openAI사이트에서 Api키를 받고 사용하면 됩니다.
+                        다만 유료이기 때문에 확인하고 사용해야하며 18달러까지는 무료입니다.
+                        github링크에 ChatGpt.py를 보면 python코드를 사용해서 Spring에 연동해서 사용하고 있습니다.
+                        처음에는 자이썬을 이용해서 연결해보려 했지만 오류도 많고 원하는 방식이 아니라는것을 알고 
+                        ProcessBuilder를 사용해 파이썬을 작동 했습니다. 주요 코드만 보고 설명하겠습니다.
+                        
+                        String pythonScriptPath = "ChatGpt.py경로"
+                        ProcessBuilder processBuilder = new ProcessBuilder("python", pythonScriptPath, nickname, apiKey);
+                        processBuilder.redirectErrorStream(true);
+                        Process process = processBuilder.start();
+                        
+                        파이썬 경로를 읽어와서 ProcessBuilder로 읽는 형식으로 작동시켰으며 nickname, apikey는 스프링에서 
+                        값을 받아 파이썬으로 전달하기위해서 processBuilder에 작성했습니다. 파이썬에서 작동시키는 것이기 떄문에
+                        타임리프가 아닌 tkinker을 사용해서 창을 띄워 대화창을 만들었습니다.
+                        
+                        (mintingController, ChatGpt.py, footer.html)
+                    </div>
                 </div>
             </div>
         </div>
@@ -93,17 +95,18 @@
     <div class="content">
         <div class="post">
             <h2>시세조회</h2>
-            <div class="imgContainer">
-                <img src="/image/project/Minty/크롤링.png" alt="크롤링 가격">
-                <img src="/image/project/Minty/팝니다 게시물.png" alt="게시판 가격">
-                <img src="/image/project/Minty/시세조회.png" alt="시세조회">
-            <div>
             <div class="write">
+                <div class="imgContainer">
+                    <img src="/image/project/Minty/크롤링.png" alt="크롤링 가격">
+                    <img src="/image/project/Minty/팝니다 게시물.png" alt="게시판 가격">
+                    <img src="/image/project/Minty/시세조회.png" alt="시세조회">
+                </div>
+                <div>
                     <b>크롤링을 이용해서 시세조회를 할 수 있게 만들었습니다.</b>
                     GptApi를 사용했던 방식과 똑같이 파이썬을 실행해서 데이터를 구하고 데이터를 스프링으로 연동시켜
                     타임리프에서 보이도록 만들었습니다. 값을 주고 받기 위해서는 Json형식으로 주고 받아야 했고
                     Json을 바로 타임리프로 보이게 하기위해 Ajax를 사용했습니다.
-
+                    
                     # 데이터를 JSON 형식으로 출력
                     json_data = json.dumps(data, ensure_ascii=False)
                     sys.stdout.buffer.write(codecs.encode(json_data, 'utf-8'))
@@ -114,22 +117,23 @@
                         type: 'GET',
                         data: { inputValue: inputValue },
                         success: function (data) {
-                          $('#mintyResultBody').empty();
-              
-                          data.forEach(function (item) {
-                            var row = $('tr');
-                            var titleLink = $('a').attr('href', '/boardDetail/' + item.id).text(item.title);
-                            $('td').append(titleLink).appendTo(row);
-                            $('td').text(item.price).appendTo(row);
-                            row.appendTo('#mintyResultBody');
-                          });
+                            $('#mintyResultBody').empty();
+                            
+                            data.forEach(function (item) {
+                                var row = $('tr');
+                                var titleLink = $('a').attr('href', '/boardDetail/' + item.id).text(item.title);
+                                $('td').append(titleLink).appendTo(row);
+                                $('td').text(item.price).appendTo(row);
+                                row.appendTo('#mintyResultBody');
+                            });
                         }
-                      });
+                    });
                     
-                      위와 같은 형식으로 데이터를 주고 받았고 정상 출력되는 것을 확인했습니다.
-                      크롤링 자체는 별로 어렵지 않았으나 데이터를 주고 정상출력되게 하는것이 더 어려웠습니다.
-
+                    위와 같은 형식으로 데이터를 주고 받았고 정상 출력되는 것을 확인했습니다.
+                    크롤링 자체는 별로 어렵지 않았으나 데이터를 주고 정상출력되게 하는것이 더 어려웠습니다.
+                    
                     (test.py, lowestController, lowest.html)
+                </div>
             </div>
         </div>
     </div>
@@ -137,22 +141,24 @@
     <div class="content">
         <div class="post">
             <h2>고객 문의 게시판</h2>
-            <div class="imgContainer">
-                <img src="/image/project/Minty/고객센터 1.png" alt="고객센터 홈">
-                <img src="/image/project/Minty/일반문의 게시판1.png" alt="일반문의게시판">
-                <img src="/image/project/Minty/신고게시판.png" alt="신고게시판">
-                <img src="/image/project/Minty/일반문의 세부.PNG" alt="신고게시판">
-            <div>
             <div class="write">
+                <div class="imgContainer">
+                    <img src="/image/project/Minty/고객센터 1.png" alt="고객센터 홈">
+                    <img src="/image/project/Minty/일반문의 게시판1.png" alt="일반문의게시판">
+                    <img src="/image/project/Minty/신고게시판.png" alt="신고게시판">
+                    <img src="/image/project/Minty/일반문의 세부.PNG" alt="신고게시판">
+                </div>
+                <div>
                     <b>CRUD를 이용한 고객문의 게시판을 만들었습니다.</b> 
                     
                     기본적인 게시판 형식이며 BaseEntiy를 사용해서 날짜들을 넣었고 처리중 과 처리완료 두가지로 나누어
                     확인 가능하며 유저는 자신의 게시물밖에 보이지 않고 관리자만 모든 유저의 문의를 볼 수 있습니다.
                     검색은 이름과 닉네임을 검색하여 확인할 수 있게 만들었습니다. 신고는 기본적으로는 일반문의와 똑같으나
                     신고할 유저의 닉네임을 추가적으로 적을 수 있게 했고 관리자가 확인하고 제재할 수 있도록 만들었습니다.
-
+                    
                     (support폴더 ad제외 모든 entity, dto, service, controller, repository
-                     user나 security와 관련된 일부포함)
+                    user나 security와 관련된 일부포함)
+                </div>
             </div>
         </div>
     </div>
@@ -160,41 +166,44 @@
     <div class="content">
         <div class="post">
             <h2>회원 탈퇴 및 복구</h2>
-            <div class="imgContainer">
-                <img src="/image/project/Minty/회원 탈퇴.PNG" alt="회원 탈퇴">
-                <img src="/image/project/Minty/회원복구 1.png" alt="회원 복구">
-                <img src="/image/project/Minty/인증번호1.png" alt="인증 번호">
-                <img src="/image/project/Minty/인증메일.PNG" alt="인증 메일">
-            <div>
             <div class="write">
-                    <b>이메일 인증을 이용하여 회원 복구 및 탈퇴 시스템을 만들었습니다.</b> 
-                    이메일로 인증번호를 보내면 해당 인증번호를 적었을때 일치하면 초록색으로 text가 뜨고
-                    틀리면 빨간색으로 text가 뜹니다. 일치할 경우에만 탈퇴 및 복구 버튼이 활성화됩니다.
-                    탈퇴했을 경우 3개월동안은 탈퇴상태가 되고 3개월 후에 개인정보가 완전히 삭제되도록 만들었습니다.
+                    <div class="imgContainer">
+                        <img src="/image/project/Minty/회원 탈퇴.PNG" alt="회원 탈퇴">
+                        <img src="/image/project/Minty/회원복구 1.png" alt="회원 복구">
+                        <img src="/image/project/Minty/인증번호1.png" alt="인증 번호">
+                        <img src="/image/project/Minty/인증메일.PNG" alt="인증 메일">
+                    <div>
+                    <div>
 
-                    $('#email-auth').blur(function() {
-                        const inputCode = $('#email-auth').val();
-                        const resultMsg = $('#mail-check-warn');
-        
-                        if (inputCode === code) {
-                            resultMsg.text('인증번호가 일치합니다.');
-                            resultMsg.css('color', 'green');
-                            $('#recovery-btn').prop('disabled', false);
-                            $('#mail-check-btn').prop('disabled', true);
-                            $('#email').prop('readonly', true);
-                        } else {
-                            resultMsg.text('인증번호가 일치하지 않습니다. 다시 확인해주세요!');
-                            resultMsg.css('color', 'red');
-                            $('#recovery-btn').prop('disabled', true);
-                        }
-                    });
-
-                    (EmailService, RecoveryController, recovery폴더, email.properties)
+                        <b>이메일 인증을 이용하여 회원 복구 및 탈퇴 시스템을 만들었습니다.</b> 
+                        이메일로 인증번호를 보내면 해당 인증번호를 적었을때 일치하면 초록색으로 text가 뜨고
+                        틀리면 빨간색으로 text가 뜹니다. 일치할 경우에만 탈퇴 및 복구 버튼이 활성화됩니다.
+                        탈퇴했을 경우 3개월동안은 탈퇴상태가 되고 3개월 후에 개인정보가 완전히 삭제되도록 만들었습니다.
+                        
+                        $('#email-auth').blur(function() {
+                            const inputCode = $('#email-auth').val();
+                            const resultMsg = $('#mail-check-warn');
+                            
+                            if (inputCode === code) {
+                                resultMsg.text('인증번호가 일치합니다.');
+                                resultMsg.css('color', 'green');
+                                $('#recovery-btn').prop('disabled', false);
+                                $('#mail-check-btn').prop('disabled', true);
+                                $('#email').prop('readonly', true);
+                            } else {
+                                resultMsg.text('인증번호가 일치하지 않습니다. 다시 확인해주세요!');
+                                resultMsg.css('color', 'red');
+                                $('#recovery-btn').prop('disabled', true);
+                            }
+                        });
+                        
+                        (EmailService, RecoveryController, recovery폴더, email.properties)
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-
-    <div id="footer"></div>
-
+        
+        <div id="footer"></div>
+        
 </body>
 </html>
