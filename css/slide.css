@@ -4,8 +4,8 @@
   
   /* 보여줄 구간의 높이와 넓이 설정 */
   #slideShow{
-    width: 500px;
-    height: 500px;
+    width: 600px;
+    height: 600px;
     position: relative;
     margin: 50px auto;
     overflow: hidden;   
@@ -15,8 +15,8 @@
   }
   
   .slides li img {
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 350px;
   }
   
   .slides{
