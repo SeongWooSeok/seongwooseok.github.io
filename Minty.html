@@ -132,10 +132,10 @@
                           $('#mintyResultBody').empty();
               
                           data.forEach(function (item) {
-                            var row = $('<tr>');
-                            var titleLink = $('<a>').attr('href', '/boardDetail/' + item.id).text(item.title);
-                            $('<td>').append(titleLink).appendTo(row);
-                            $('<td>').text(item.price).appendTo(row);
+                            var row = $('tr');
+                            var titleLink = $('a').attr('href', '/boardDetail/' + item.id).text(item.title);
+                            $('td').append(titleLink).appendTo(row);
+                            $('td').text(item.price).appendTo(row);
                             row.appendTo('#mintyResultBody');
                           });
                         }
