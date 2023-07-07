@@ -93,24 +93,41 @@ label {
     white-space: pre-line;
 }
 
-#index_03{
-    width: 1600px;
-    height: 500px;
-    border: 1px solid dimgrey;
+.box{
+    width: 400px; 
     margin: 0 auto;
   }
   
-  #slide3{
-    height: 400px;
-    border-bottom: 1px solid dimgrey;
+  .slide{ 
+    width:400px; height:400px;
+    overflow: hidden;
+  }
+  .images{
+    display: flex; 
+    height:333px;
+    transition: transform 0.5s;
+  }
+  img{
+    width:400px; height:400px;
   }
   
-  #slide3>ul>li{
-    position: absolute;
-    font-size: 0;
+  .back{
+    position:relative;
+    bottom: 170px; right: 35px;
+  }
+  .next{
+    position:relative;
+    bottom: 170px; left: 220px;
   }
 
-  img{
-    width: 400;
-    height: 400;
+  button{
+    width: 30px; height: 30px;
+    color: white;
+    background: #646464;
+  }
+  button:active{
+    background:#3e3e3e;
+  }
+  button:disabled{
+    background: #cbcaca;
   }
