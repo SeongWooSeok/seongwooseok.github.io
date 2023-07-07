@@ -92,3 +92,25 @@ label {
 .write div {
     white-space: pre-line;
 }
+
+#index_03{
+    width: 1600px;
+    height: 500px;
+    border: 1px solid dimgrey;
+    margin: 0 auto;
+  }
+  
+  #slide3{
+    height: 400px;
+    border-bottom: 1px solid dimgrey;
+  }
+  
+  #slide3>ul>li{
+    position: absolute;
+    font-size: 0;
+  }
+
+  img{
+    width: 400;
+    height: 400;
+  }
