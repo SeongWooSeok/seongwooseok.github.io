@@ -1,38 +1,26 @@
-let pages = 0;
-let positionValue = 0;
-const IMAGE_WIDTH = 400;
-//DOM
-const backBtn = document.querySelector(".back")
-const nextBtn = document.querySelector(".next")
-const images = document.querySelector(".images")
+const slides = document.querySelector('.slides'); //전체 슬라이드 컨테이너
+const slideImg = document.querySelectorAll('.slides li'); //모든 슬라이드들
+let currentIdx = 0; //현재 슬라이드 index
+const slideCount = slideImg.length; // 슬라이드 개수
+const prev = document.querySelector('.prev'); //이전 버튼
+const next = document.querySelector('.next'); //다음 버튼
+const slideWidth = 400; //한개의 슬라이드 넓이
+const slideMargin = 150; //슬라이드간의 margin 값
 
-function next() {
-  if (pages< 2) {
-    backBtn.removeAttribute('disabled')
-    positionValue -= IMAGE_WIDTH;
-    images.style.transform = `translateX(${positionValue}px)`;
-    pages += 1;
-  }
-  if (pages === 2) {
-    nextBtn.setAttribute('disabled', 'true')
-  }
+//전체 슬라이드 컨테이너 넓이 설정
+slides.style.width = (slideWidth + slideMargin) * slideCount + 'px';
+
+function moveSlide(num) {
+  slides.style.left = -num * 400 + 'px';
+  currentIdx = num;
 }
 
-function back() {
-  if (pages > 0) {
-    nextBtn.removeAttribute('disabled')
-    positionValue += IMAGE_WIDTH;
-    images.style.transform = `translateX(${positionValue}px)`;
-    pages -= 1;
-  }
-  if (pages === 0) {
-    backBtn.setAttribute('disabled', 'true')
-  }
-}
+prev.addEventListener('click', function () {
+  if (currentIdx !== 0) moveSlide(currentIdx - 1);
+});
 
-function init() {
-  backBtn.setAttribute('disabled', 'true');
-  backBtn.addEventListener("click", back);
-  nextBtn.addEventListener("click", next);
-}
-init();
+next.addEventListener('click', function () {
+  if (currentIdx !== slideCount - 1) {
+    moveSlide(currentIdx + 1);
+  }
+});
