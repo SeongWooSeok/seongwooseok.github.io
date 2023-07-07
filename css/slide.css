@@ -2,7 +2,7 @@ li{
   list-style-type: none;
 }
 
-#slideShow{
+.slideShow{
   width: 600px;
   height: 400px;
   position: relative;
