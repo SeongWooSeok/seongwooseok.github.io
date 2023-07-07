@@ -90,5 +90,13 @@ Vue.config.devtools = true;
             el: '#app'
         });
 
+        document.getElementById('skillsLink').addEventListener('click', () => {
+            const skillsSection = document.getElementById('skills-section');
+            skillsSection.scrollIntoView({ behavior: 'smooth' });
+        });
 
+        document.getElementById('projectLink').addEventListener('click', () => {
+            const skillsSection = document.getElementById('project-section');
+            skillsSection.scrollIntoView({ behavior: 'smooth' });
+        });
         
