@@ -94,12 +94,12 @@ label {
 }
 
 .box{
-    width: 400px; 
+    width: 250px; 
     margin: 0 auto;
   }
   
   .slide{ 
-    width:400px; height:400px;
+    width:250px; height:333px;
     overflow: hidden;
   }
   .images{
@@ -108,7 +108,7 @@ label {
     transition: transform 0.5s;
   }
   img{
-    width:400px; height:400px;
+    width:250px; height:333px;
   }
   
   .back{
