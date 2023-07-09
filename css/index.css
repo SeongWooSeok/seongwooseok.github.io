@@ -267,3 +267,8 @@ margin-right: 5%;
 #scrollToTopBtn.show {
   display: block;
 }
+
+.scroll-container{
+  overflow: scroll;
+  scroll-behavior: smooth;
+}
