@@ -19,15 +19,12 @@
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-$("#projectLink").click(function() {
-  var targetOffset = $("#project-section").offset().top;
-  $("html, body").animate({ scrollTop: targetOffset }, "slow");
-  return false;
-});
-
-$("#skillsLink").click(function() {
-  var targetOffset = $("#skills-section").offset().top;
-  $("html, body").animate({ scrollTop: targetOffset }, "slow");
-  return false;
-});
+  $("#projectLink").click(function() {
+    $("html, body").animate({ scrollTop: 500 }, "slow");
+    return false;
+  });
+  $("#skillsLink").click(function() {
+    $("html, body").animate({ scrollTop: 1000 }, "slow");
+    return false;
+  });
 </script>
