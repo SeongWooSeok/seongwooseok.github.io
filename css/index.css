@@ -269,7 +269,6 @@ margin-right: 5%;
 }
 
 .scroll-container{
-  overflow: scroll;
+  overflow: auto;
   scroll-behavior: smooth;
-  border: none;
 }
