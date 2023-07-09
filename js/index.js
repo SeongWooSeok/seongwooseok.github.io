@@ -90,3 +90,10 @@ Vue.config.devtools = true;
             el: '#app'
         });
         
+        const smoothLink = document.querySelector('#smooth');
+
+        smoothLink.addEventListener('click', (event) => {
+            event.preventDefault();
+            const target = document.querySelector(event.target.getAttribute('href'));
+            target.scrollIntoView({ behavior: 'smooth' });
+        });
