@@ -90,13 +90,17 @@ Vue.config.devtools = true;
             el: '#app'
         });
 
-        document.getElementById('skillsLink').addEventListener('click', () => {
-            const skillsSection = document.getElementById('skills-section');
-            skillsSection.scrollIntoView({ behavior: 'smooth' });
-        });
-
-        document.getElementById('projectLink').addEventListener('click', () => {
-            const skillsSection = document.getElementById('project-section');
-            skillsSection.scrollIntoView({ behavior: 'smooth' });
-        });
+        $(document).ready(function() {
+            $("#projectLink").click(function() {
+              $('html, body').animate({
+                scrollTop: $("#project-section").offset().top
+              }, 1000);
+            });
+          
+            $("#skillsLink").click(function() {
+              $('html, body').animate({
+                scrollTop: $("#skills-section").offset().top
+              }, 1000);
+            });
+          });
         
