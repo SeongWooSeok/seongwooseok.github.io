@@ -5,6 +5,10 @@
     font-style: normal;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "ImcreSoojin";
   font-size: 14px;
@@ -270,5 +274,4 @@ margin-right: 5%;
 
 .scroll-container{
   overflow: auto;
-  scroll-behavior: smooth;
 }

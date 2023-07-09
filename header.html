@@ -16,13 +16,3 @@
     </div>
   </nav>
 </div>
-
-<script>
-  const smoothLink = document.querySelector('#smooth');
-
-  smoothLink.addEventListener('click', (event) => {
-      event.preventDefault();
-      const target = document.querySelector(event.target.getAttribute('href'));
-      target.scrollIntoView({ behavior: 'smooth' });
-  });
-</script>
